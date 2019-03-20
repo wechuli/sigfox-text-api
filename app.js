@@ -3,6 +3,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const morgan = require("morgan");
 
 //Initialize tha app
 
@@ -11,6 +12,7 @@ const app = express();
 //Add middleware
 
 app.use(helmet());
+app.use(morgan("dev"));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
