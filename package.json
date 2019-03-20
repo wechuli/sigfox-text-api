@@ -1,0 +1,19 @@
+{
+  "name": "sigox-api",
+  "version": "1.0.0",
+  "description": "sigfox api",
+  "main": "app.js",
+  "repository": "https://github.com/wechuli/sigox-api.git",
+  "author": "wechuli <wechulipaul@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.1",
+    "joi": "^14.3.1",
+    "mongoose": "^5.4.15",
+    "passport": "^0.4.0"
+  }
+}
