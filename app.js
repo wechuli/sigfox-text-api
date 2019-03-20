@@ -40,7 +40,7 @@ app.use((req, res) => {
 });
 
 //Listening
-const port = process.env.PORT || 5002;
+const port = 80;
 
 app.listen(port, () => {
   console.info(`The app is listening on port ${port}`);
