@@ -22,10 +22,25 @@ app.use(bodyParser.json());
 //Routes
 
 app.use("/data", (req, res) => {
+  const UINT16_t_MAX = 65536;
+  const INT16_t_MAX = 32767;
+
+  let moduleTemp = req.body.field1;
+
+  let distance = req.body.field2;
+
+  let temp1 = ((moduleTemp / INT16_t_MAX) * 120).toFixed(2);
+
+  let convdistance = ((distance / UINT16_t_MAX) * 600).toFixed(2);
+
   try {
     // console.log(req.params);
     // console.log(req.query);
     console.log(req.body);
+
+    console.log(
+      `The module temp is ${temp1}, and the distance is ${convdistance} cm `
+    );
 
     res.status(200).json({ success: true });
   } catch (error) {
